@@ -34,7 +34,7 @@ jobs:
             echo "Build UtiliSense.Gas project ended"
 
             echo "Build UtiliSense.Grid project started"
-            cd ${{ github.workspace }}/UtiliSense.Grid
+            cd ${{ github.workspace }}/UtiliSence.Grid
             dotnet build UtiliSense.Grid.csproj
 
             echo "Build UtiliSense.Grid project ended"
