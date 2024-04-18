@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Grid", "UtiliSen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Solar", "UtiliSence.Solar\UtiliSense.Solar.csproj", "{31DD967B-4860-4B67-A38D-28CE36D18E4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSence.Water", "UtiliSence.Water\UtiliSence.Water.csproj", "{FC15852D-2D8E-464D-9B04-A654812B8A17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Water", "UtiliSence.Water\UtiliSense.Water.csproj", "{FC15852D-2D8E-464D-9B04-A654812B8A17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
