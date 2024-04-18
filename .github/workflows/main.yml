@@ -34,20 +34,20 @@ jobs:
             echo "Build UtiliSense.Gas project ended"
 
             echo "Build UtiliSense.Grid project started"
-            cd ${{ github.workspace }}/UtiliSense.Grid
+            cd ${{ github.workspace }}/UtiliSence.Grid
             dotnet build UtiliSense.Grid.csproj
 
             echo "Build UtiliSense.Grid project ended"
 
             echo "Build UtiliSense.Solar project started"
-            cd ${{ github.workspace }}/UtiliSense.Solar
+            cd ${{ github.workspace }}/UtiliSence.Solar
             
             dotnet build UtiliSense.Solar.csproj
 
             echo "Build UtiliSense.Solar project ended"
 
             echo "Build UtiliSense.Water project started"
-            cd ${{ github.workspace }}/UtiliSense.Water
+            cd ${{ github.workspace }}/UtiliSence.Water
             dotnet build UtiliSense.Water.csproj
 
             echo "Build UtiliSense.Water project ended"
