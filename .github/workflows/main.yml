@@ -22,7 +22,7 @@ jobs:
         run: |
           if [[ $modified_files == *"UtiliSence.Gas"* ]]; then
             echo "Build UtiliSence.Gas project started"
-            cd src/UtiliSence.Gas
+            cd UtiliSence2/UtiliSence.Gas
             dotnet build UtiliSence.Gas.csproj
             dotnet build UtiliSence.Gas.Tests.csproj
             echo "Build UtiliSence.Gas project ended"
@@ -30,7 +30,7 @@ jobs:
 
           if [[ $modified_files == *"UtiliSence.Grid"* ]]; then
             echo "Build UtiliSence.Grid project started"  
-            cd src/UtiliSence.Gas
+            cd UtiliSence2/UtiliSence.Gas
             dotnet build UtiliSence.Grid.csproj
             dotnet build UtiliSence.Grid.Tests.csproj
             echo "Build UtiliSence.Grid project ended"
