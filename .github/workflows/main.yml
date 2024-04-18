@@ -28,7 +28,7 @@ jobs:
       - name: Build modified projects
         run: |
             echo "Build UtiliSence.Gas project started"
-            cd /home/runner/work/UtiliSense2/UtiliSense2/UtiliSence.Grid
+
             dotnet build UtiliSence.Gas.csproj
             dotnet build UtiliSence.Gas.Tests.csproj
             echo "Build UtiliSence.Gas project ended"
