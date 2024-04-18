@@ -28,7 +28,7 @@ jobs:
       - name: Build modified projects
         run: |
             echo "Build UtiliSence.Gas project started"
-
+            cd /UtiliSence.Gas.csproj
             dotnet build UtiliSence.Gas.csproj
             dotnet build UtiliSence.Gas.Tests.csproj
             echo "Build UtiliSence.Gas project ended"
