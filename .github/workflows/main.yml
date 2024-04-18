@@ -47,7 +47,7 @@ jobs:
             echo "Build UtiliSense.Solar project ended"
 
             echo "Build UtiliSense.Water project started"
-            cd ${{ github.workspace }}/UtiliSence.Water
+            cd ${{ github.workspace }}/UtiliSense.Water
             dotnet build UtiliSense.Water.csproj
 
             echo "Build UtiliSense.Water project ended"
