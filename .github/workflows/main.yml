@@ -28,26 +28,26 @@ jobs:
       - name: Build modified projects
         run: |
             echo "Build UtiliSense.Gas project started"
-            cd ${{ github.workspace }}/UtiliSence.Gas
+            cd ${{ github.workspace }}/UtiliSense.Gas
             dotnet build UtiliSense.Gas.csproj
 
             echo "Build UtiliSense.Gas project ended"
 
             echo "Build UtiliSense.Grid project started"
-            cd ${{ github.workspace }}/UtiliSence.Grid
+            cd ${{ github.workspace }}/UtiliSense.Grid
             dotnet build UtiliSense.Grid.csproj
 
             echo "Build UtiliSense.Grid project ended"
 
             echo "Build UtiliSense.Solar project started"
-            cd ${{ github.workspace }}/UtiliSence.Solar
+            cd ${{ github.workspace }}/UtiliSense.Solar
             
             dotnet build UtiliSense.Solar.csproj
 
             echo "Build UtiliSense.Solar project ended"
 
             echo "Build UtiliSense.Water project started"
-            cd ${{ github.workspace }}/UtiliSence.Water
+            cd ${{ github.workspace }}/UtiliSense.Water
             dotnet build UtiliSense.Water.csproj
 
             echo "Build UtiliSense.Water project ended"
