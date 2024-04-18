@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSence.Solar", "UtiliSence.Solar", "{0E560C6B-EED2-4A66-8E1D-A82456A8F63F}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSence.Water", "UtiliSence.Water", "{9A259C31-57A2-4453-A73C-F57A2EC82296}"
 EndProject
