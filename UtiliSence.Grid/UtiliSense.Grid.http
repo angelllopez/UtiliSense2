@@ -1,0 +1,6 @@
+@UtiliSense.Grid_HostAddress = http://localhost:5190
+
+GET {{UtiliSense.Grid_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

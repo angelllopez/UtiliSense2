@@ -1,6 +1,0 @@
-@UtiliSence.Gas_HostAddress = http://localhost:5050
-
-GET {{UtiliSence.Gas_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
