@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSence.Solar", "UtiliSence.Solar", "{0E560C6B-EED2-4A66-8E1D-A82456A8F63F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSence.Water", "UtiliSence.Water", "{9A259C31-57A2-4453-A73C-F57A2EC82296}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSence.Grid", "UtiliSence.Grid", "{288816CC-62EE-4483-B04D-B743AD389F2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSence.Gas", "UtiliSence.Gas", "{F9F8318B-9DF2-4E17-A9AB-4667BBD0A565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSence.Gas", "UtiliSence.Gas\UtiliSence.Gas.csproj", "{AE965048-685E-4D0F-832D-EB61ECAA7EF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSence.Grid", "UtiliSence.Grid\UtiliSence.Grid.csproj", "{FAA58E4B-4FCB-444A-95A0-CECF2A754D27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSence.Solar", "UtiliSence.Solar\UtiliSence.Solar.csproj", "{31DD967B-4860-4B67-A38D-28CE36D18E4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSence.Water", "UtiliSence.Water\UtiliSence.Water.csproj", "{FC15852D-2D8E-464D-9B04-A654812B8A17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE965048-685E-4D0F-832D-EB61ECAA7EF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE965048-685E-4D0F-832D-EB61ECAA7EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE965048-685E-4D0F-832D-EB61ECAA7EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE965048-685E-4D0F-832D-EB61ECAA7EF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA58E4B-4FCB-444A-95A0-CECF2A754D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA58E4B-4FCB-444A-95A0-CECF2A754D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA58E4B-4FCB-444A-95A0-CECF2A754D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA58E4B-4FCB-444A-95A0-CECF2A754D27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31DD967B-4860-4B67-A38D-28CE36D18E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31DD967B-4860-4B67-A38D-28CE36D18E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31DD967B-4860-4B67-A38D-28CE36D18E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31DD967B-4860-4B67-A38D-28CE36D18E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC15852D-2D8E-464D-9B04-A654812B8A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC15852D-2D8E-464D-9B04-A654812B8A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC15852D-2D8E-464D-9B04-A654812B8A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC15852D-2D8E-464D-9B04-A654812B8A17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE965048-685E-4D0F-832D-EB61ECAA7EF7} = {F9F8318B-9DF2-4E17-A9AB-4667BBD0A565}
+		{FAA58E4B-4FCB-444A-95A0-CECF2A754D27} = {288816CC-62EE-4483-B04D-B743AD389F2C}
+		{31DD967B-4860-4B67-A38D-28CE36D18E4C} = {0E560C6B-EED2-4A66-8E1D-A82456A8F63F}
+		{FC15852D-2D8E-464D-9B04-A654812B8A17} = {9A259C31-57A2-4453-A73C-F57A2EC82296}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69C9957E-86BF-4ECF-99C3-E19AD55AC1F8}
+	EndGlobalSection
+EndGlobal

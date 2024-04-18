@@ -1,0 +1,6 @@
+@UtiliSence.Water_HostAddress = http://localhost:5037
+
+GET {{UtiliSence.Water_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

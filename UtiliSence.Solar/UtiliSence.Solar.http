@@ -1,0 +1,6 @@
+@UtiliSence.Solar_HostAddress = http://localhost:5084
+
+GET {{UtiliSence.Solar_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
