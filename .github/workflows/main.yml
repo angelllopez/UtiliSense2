@@ -24,10 +24,11 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
         working-directory: ${{ github.workspace }}
+
       - name: Build modified projects
         run: |
             echo "Build UtiliSence.Gas project started"
-            cd working-directory/src/UtiliSence.Gas  # Adjust the directory path as per your project structure
+            cd UtiliSense2/UtiliSence.Gas  # Adjust the directory path as per your project structure
             dotnet build UtiliSence.Gas.csproj
             dotnet build UtiliSence.Gas.Tests.csproj
             echo "Build UtiliSence.Gas project ended"
