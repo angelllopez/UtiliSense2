@@ -30,23 +30,24 @@ jobs:
             echo "Build UtiliSence.Gas project started"
             cd ${{ github.workspace }}/UtiliSence.Gas
             dotnet build UtiliSence.Gas.csproj
-            dotnet build UtiliSence.Gas.Tests.csproj
+
             echo "Build UtiliSence.Gas project ended"
 
             echo "Build UtiliSence.Grid project started"
-            cd src/UtiliSence.Grid  # Adjust the directory path as per your project structure
+            cd ${{ github.workspace }}/UtiliSence.Grid
             dotnet build UtiliSence.Grid.csproj
-            dotnet build UtiliSence.Grid.Tests.csproj
+
             echo "Build UtiliSence.Grid project ended"
 
             echo "Build UtiliSence.Solar project started"
-            cd src/UtiliSence.Solar  # Adjust the directory path as per your project structure
+            cd ${{ github.workspace }}/UtiliSence.Solar
+            
             dotnet build UtiliSence.Solar.csproj
-            dotnet build UtiliSence.Solar.Tests.csproj
+
             echo "Build UtiliSence.Solar project ended"
 
             echo "Build UtiliSence.Water project started"
-            cd src/UtiliSence.Water  # Adjust the directory path as per your project structure
+            cd ${{ github.workspace }}/UtiliSence.Water
             dotnet build UtiliSence.Water.csproj
-            dotnet build UtiliSence.Water.Tests.csproj
+
             echo "Build UtiliSence.Water project ended"
