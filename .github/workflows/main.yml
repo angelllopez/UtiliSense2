@@ -1,0 +1,53 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Identify modified files
+        run: |
+          modified_files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+          echo "Modified files: $modified_files"
+
+      - name: Build modified projects
+        run: |
+          if [[ $modified_files == *"UtiliSence.Gas"* ]]; then
+            echo "Build UtiliSence.Gas project started"
+            cd UtiliSence2/UtiliSence.Gas
+            dotnet build UtiliSence.Gas.csproj
+            dotnet build UtiliSence.Gas.Tests.csproj
+            echo "Build UtiliSence.Gas project ended"
+          fi
+
+          if [[ $modified_files == *"UtiliSence.Grid"* ]]; then
+            echo "Build UtiliSence.Grid project started"  
+            cd UtiliSence2/UtiliSence.Gas
+            dotnet build UtiliSence.Grid.csproj
+            dotnet build UtiliSence.Grid.Tests.csproj
+            echo "Build UtiliSence.Grid project ended"
+          fi
+
+          if [[ $modified_files == *"UtiliSence.Solar"* ]]; then
+            cd src/UtiliSence.Gas
+            echo "Build UtiliSence.Solar project started"
+            dotnet build UtiliSence.Solar.csproj
+            dotnet build UtiliSence.Solar.Tests.csproj
+            echo "Build UtiliSence.Solar project ended"
+          fi
+
+          if [[ $modified_files == *"UtiliSence.Water"* ]]; then
+            echo "Build UtiliSence.Water project started"
+            cd src/UtiliSence.Gas
+            dotnet build UtiliSence.Water.csproj
+            dotnet build UtiliSence.Water.Tests.csproj
+            echo "Build UtiliSence.Water project ended"
+          fi
