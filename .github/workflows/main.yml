@@ -28,7 +28,7 @@ jobs:
       - name: Build modified projects
         run: |
             echo "Build UtiliSense.Gas project started"
-            cd ${{ github.workspace }}/UtiliSense.Gas
+            cd ${{ github.workspace }}/UtiliSence.Gas
             dotnet build UtiliSense.Gas.csproj
 
             echo "Build UtiliSense.Gas project ended"
