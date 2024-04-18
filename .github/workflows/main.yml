@@ -27,13 +27,13 @@ jobs:
       - name: Build modified projects
         run: |
             echo "Build UtiliSence.Gas project started"
-            cd UtiliSence2/UtiliSence.Gas  # Adjust the directory path as per your project structure
+            cd UtiliSence.Gas  # Adjust the directory path as per your project structure
             dotnet build UtiliSence.Gas.csproj
             dotnet build UtiliSence.Gas.Tests.csproj
             echo "Build UtiliSence.Gas project ended"
 
             echo "Build UtiliSence.Grid project started"
-            cd UtiliSence2/UtiliSence.Grid  # Adjust the directory path as per your project structure
+            cd UtiliSence.Grid  # Adjust the directory path as per your project structure
             dotnet build UtiliSence.Grid.csproj
             dotnet build UtiliSence.Grid.Tests.csproj
             echo "Build UtiliSence.Grid project ended"
