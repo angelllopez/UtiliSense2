@@ -25,7 +25,7 @@ jobs:
         run: dotnet restore
         working-directory: ${{ github.workspace }}
 
-      - name: Build modified projects
+      - name: Build main projects
         run: |
             echo "Build UtiliSense.Gas project started"
             cd ${{ github.workspace }}/UtiliSence.Gas
@@ -46,3 +46,10 @@ jobs:
             cd ${{ github.workspace }}/UtiliSence.Water
             dotnet build UtiliSense.Water.csproj
             echo "Build UtiliSense.Water project ended"
+
+      - name: Build unit tests projects
+        run: |
+            echo "Build UtiliSense.Gas.Tests project started"
+            cd ${{ github.workspace }}/UtiliSense.Gas.Tests
+            dotnet build UtiliSense.Gas.Tests.csproj
+            echo "Build UtiliSense.Gas.Tests project ended"       
