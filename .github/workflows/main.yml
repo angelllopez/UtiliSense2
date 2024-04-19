@@ -52,4 +52,8 @@ jobs:
             echo "Build UtiliSense.Gas.Tests project started"
             cd ${{ github.workspace }}/UtiliSense.Gas.Tests
             dotnet build UtiliSense.Gas.Tests.csproj
-            echo "Build UtiliSense.Gas.Tests project ended"       
+            echo "Build UtiliSense.Gas.Tests project ended" 
+
+      - name: Run unit tests projects
+        run: dotnet test
+        if: ${{ failure() }}    
