@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSence.Solar\UtiliSense.Solar.csproj" />
+    <ProjectReference Include="..\UtiliSense.Solar\UtiliSense.Solar.csproj" />
   </ItemGroup>
 
   <ItemGroup>
