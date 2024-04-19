@@ -54,6 +54,22 @@ jobs:
             dotnet build UtiliSense.Gas.Tests.csproj
             echo "Build UtiliSense.Gas.Tests project ended" 
 
+            
+            echo "Build UtiliSense.Grid.Tests project started"
+            cd ${{ github.workspace }}/UtiliSense.Grid.Tests
+            dotnet build UtiliSense.Grid.Tests.csproj
+            echo "Build UtiliSense.Grid.Tests project ended"
+            
+            echo "Build UtiliSense.Solar.Tests project started"
+            cd ${{ github.workspace }}/UtiliSense.Solar.Tests            
+            dotnet build UtiliSense.Solar.Tests.csproj
+            echo "Build UtiliSense.Solar.Tests project ended"
+            
+            echo "Build UtiliSense.Water.Tests project started"
+            cd ${{ github.workspace }}/UtiliSense.Water.Tests
+            dotnet build UtiliSense.Water.Tests.csproj
+            echo "Build UtiliSense.Water.Tests project ended"
+            
       - name: Run unit tests projects
         run: dotnet test
         if: ${{ failure() }}    
