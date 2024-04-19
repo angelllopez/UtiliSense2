@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSence.Water\UtiliSense.Water.csproj" />
+    <ProjectReference Include="..\UtiliSense.Water\UtiliSense.Water.csproj" />
   </ItemGroup>
 
   <ItemGroup>

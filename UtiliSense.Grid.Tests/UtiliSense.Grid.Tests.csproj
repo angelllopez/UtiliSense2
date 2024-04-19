@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSence.Grid\UtiliSense.Grid.csproj" />
+    <ProjectReference Include="..\UtiliSense.Grid\UtiliSense.Grid.csproj" />
   </ItemGroup>
 
   <ItemGroup>

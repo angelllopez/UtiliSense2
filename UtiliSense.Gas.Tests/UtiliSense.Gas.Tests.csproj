@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSence.Gas\UtiliSense.Gas.csproj" />
+    <ProjectReference Include="..\UtiliSense.Gas\UtiliSense.Gas.csproj" />
   </ItemGroup>
 
   <ItemGroup>
