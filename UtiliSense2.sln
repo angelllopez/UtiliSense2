@@ -11,13 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSense.Grid", "UtiliSen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSense.Gas", "UtiliSense.Gas", "{F9F8318B-9DF2-4E17-A9AB-4667BBD0A565}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Gas", "UtiliSence.Gas\UtiliSense.Gas.csproj", "{AE965048-685E-4D0F-832D-EB61ECAA7EF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas", "UtiliSence.Gas\UtiliSense.Gas.csproj", "{AE965048-685E-4D0F-832D-EB61ECAA7EF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Grid", "UtiliSence.Grid\UtiliSense.Grid.csproj", "{FAA58E4B-4FCB-444A-95A0-CECF2A754D27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid", "UtiliSence.Grid\UtiliSense.Grid.csproj", "{FAA58E4B-4FCB-444A-95A0-CECF2A754D27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Solar", "UtiliSence.Solar\UtiliSense.Solar.csproj", "{31DD967B-4860-4B67-A38D-28CE36D18E4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar", "UtiliSence.Solar\UtiliSense.Solar.csproj", "{31DD967B-4860-4B67-A38D-28CE36D18E4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Water", "UtiliSence.Water\UtiliSense.Water.csproj", "{FC15852D-2D8E-464D-9B04-A654812B8A17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Water", "UtiliSence.Water\UtiliSense.Water.csproj", "{FC15852D-2D8E-464D-9B04-A654812B8A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Gas.Tests", "UtiliSense.Gas.Tests\UtiliSense.Gas.Tests.csproj", "{8617B5CE-3BBF-4829-8F84-9C04C26C380C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{FC15852D-2D8E-464D-9B04-A654812B8A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC15852D-2D8E-464D-9B04-A654812B8A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC15852D-2D8E-464D-9B04-A654812B8A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8617B5CE-3BBF-4829-8F84-9C04C26C380C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8617B5CE-3BBF-4829-8F84-9C04C26C380C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8617B5CE-3BBF-4829-8F84-9C04C26C380C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8617B5CE-3BBF-4829-8F84-9C04C26C380C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{FAA58E4B-4FCB-444A-95A0-CECF2A754D27} = {288816CC-62EE-4483-B04D-B743AD389F2C}
 		{31DD967B-4860-4B67-A38D-28CE36D18E4C} = {0E560C6B-EED2-4A66-8E1D-A82456A8F63F}
 		{FC15852D-2D8E-464D-9B04-A654812B8A17} = {9A259C31-57A2-4453-A73C-F57A2EC82296}
+		{8617B5CE-3BBF-4829-8F84-9C04C26C380C} = {F9F8318B-9DF2-4E17-A9AB-4667BBD0A565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69C9957E-86BF-4ECF-99C3-E19AD55AC1F8}
