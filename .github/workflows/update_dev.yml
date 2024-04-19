@@ -1,0 +1,19 @@
+name: Update Dev Branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copy_to_dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create dev branch
+        run: git checkout -b dev
+
+      - name: Push changes to dev branch
+        run: git push origin dev
