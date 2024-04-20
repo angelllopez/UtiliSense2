@@ -25,27 +25,20 @@ jobs:
         run: dotnet restore
         working-directory: ${{ github.workspace }}
 
-      - name: Build main projects
+      - name: Build changed projects
         run: |
-            echo "Build UtiliSense.Gas project started"
-            cd ${{ github.workspace }}/UtiliSense.Gas
-            dotnet build UtiliSense.Gas.csproj
-            echo "Build UtiliSense.Gas project ended"
-
-            echo "Build UtiliSense.Grid project started"
-            cd ${{ github.workspace }}/UtiliSense.Grid
-            dotnet build UtiliSense.Grid.csproj
-            echo "Build UtiliSense.Grid project ended"
-
-            echo "Build UtiliSense.Solar project started"
-            cd ${{ github.workspace }}/UtiliSense.Solar            
-            dotnet build UtiliSense.Solar.csproj
-            echo "Build UtiliSense.Solar project ended"
-
-            echo "Build UtiliSense.Water project started"
-            cd ${{ github.workspace }}/UtiliSense.Water
-            dotnet build UtiliSense.Water.csproj
-            echo "Build UtiliSense.Water project ended"
+          # Check if the project directory has changes
+          if git diff --name-only ${{ github.base_ref }}..${{ github.head_ref }} | grep -qE '^UtiliSense\\.(Gas|Grid|Solar|Water)/'; then
+            echo "Building changed projects"
+            # Build only the changed projects
+            for project in UtiliSense.Gas UtiliSense.Grid UtiliSense.Solar UtiliSense.Water; do
+              echo "Building $project"
+              cd ${{ github.workspace }}/$project
+              dotnet build $project.csproj
+            done
+          else
+            echo "No changes in project directories. Skipping build."
+          fi  
 
       - name: Build unit tests projects
         run: |
