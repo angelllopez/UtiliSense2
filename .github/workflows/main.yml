@@ -72,5 +72,3 @@ jobs:
             
       - name: Run unit tests projects
         run: dotnet test
-        if: ${{ failure() }}    
-
