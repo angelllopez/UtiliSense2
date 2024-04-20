@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\UtiliSense.Solar.Data\UtiliSense.Solar.Data.csproj" />
     <ProjectReference Include="..\UtiliSense.Solar\UtiliSense.Solar.csproj" />
   </ItemGroup>
 
@@ -36,7 +37,6 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Service\" />
   </ItemGroup>
 
 </Project>
