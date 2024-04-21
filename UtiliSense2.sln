@@ -71,6 +71,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.BizRules", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Grid.BizRules", "UtiliSense.Grid.BizRules\UtiliSense.Grid.BizRules.csproj", "{0B3EA6F2-CFA4-49A7-A337-E99351689F58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Solar.BizRules", "UtiliSense.Solar.BizRules\UtiliSense.Solar.BizRules.csproj", "{02DF89E4-A7E4-4A46-9C65-A0F66F67D602}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +135,10 @@ Global
 		{0B3EA6F2-CFA4-49A7-A337-E99351689F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B3EA6F2-CFA4-49A7-A337-E99351689F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B3EA6F2-CFA4-49A7-A337-E99351689F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02DF89E4-A7E4-4A46-9C65-A0F66F67D602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02DF89E4-A7E4-4A46-9C65-A0F66F67D602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02DF89E4-A7E4-4A46-9C65-A0F66F67D602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02DF89E4-A7E4-4A46-9C65-A0F66F67D602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -168,6 +174,7 @@ Global
 		{297B862C-7372-46D2-9480-7048312A409C} = {F9F8318B-9DF2-4E17-A9AB-4667BBD0A565}
 		{2741D48D-28D8-4E90-B322-839A366E5DC4} = {297B862C-7372-46D2-9480-7048312A409C}
 		{0B3EA6F2-CFA4-49A7-A337-E99351689F58} = {DF21099C-1440-4995-B052-56CF6A1AB673}
+		{02DF89E4-A7E4-4A46-9C65-A0F66F67D602} = {7B67DD2C-075C-410F-AD66-4A0F8E7F8450}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69C9957E-86BF-4ECF-99C3-E19AD55AC1F8}
