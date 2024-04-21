@@ -13,7 +13,7 @@ public class SolarPowerActivityController : ControllerBase
     /// <summary>
     /// Initializes a new instance of the SolarPowerActivityController class.
     /// </summary>
-    /// <param name="dataService">
+    /// <param name="repo">
     /// An ISolarPowerDataRepository type that represents the dependency injected.
     /// Solar Power Data repository interface
     /// </param>
@@ -23,10 +23,7 @@ public class SolarPowerActivityController : ControllerBase
     }
 
     /// <summary>
-    /// Asynchronously retrieves all the solar power activity data records from the repository and 
-    /// returns an IActionResult type that represents two possible HTTP status codes: 200 
-    /// or 404. If the solar power activity data is available, it returns Ok(solarPowerData). If not,
-    /// it returns NotFound().
+    /// Retrieves all the solar power activity data records. 
     /// </summary>
     /// <returns>
     /// A Task IActionResult object that represents the result of the asynchronous operation.
