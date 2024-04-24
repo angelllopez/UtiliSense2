@@ -51,5 +51,7 @@ jobs:
           }
           
           build_project "UtiliSense.Gas"
-
+          build_project "UtiliSense.Grid"
+          build_project "UtiliSense.Solar"
+          build_project "UtiliSense.Water"
 
