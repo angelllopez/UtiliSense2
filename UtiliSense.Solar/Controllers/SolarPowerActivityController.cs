@@ -18,9 +18,9 @@ namespace UtiliSense.Solar.Controllers;
 /// </param>
 [Route("api/[controller]")]
 [ApiController]
-public class SolarPowerActivityController(ISolarPowerDataRepository repo) : ControllerBase
+public class SolarPowerActivityController(ISolarSystemDataRepository repo) : ControllerBase
 {
-    private readonly ISolarPowerDataRepository _repo = repo;
+    private readonly ISolarSystemDataRepository _repo = repo;
 
     /// <summary>
     /// Retrieves all the solar power activity data records. 

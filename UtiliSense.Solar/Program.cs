@@ -26,7 +26,7 @@ builder.Services.AddCors(options =>
                       });
 });
 
-builder.Services.AddScoped<ISolarPowerDataRepository, SolarPowerDataRepository>();
+builder.Services.AddScoped<ISolarSystemDataRepository, SolarSystemDataRepository>();
 //builder.Services.AddScoped<IProductionDataService, ProductionDataService>();
 
 builder.Host.UseSerilog((context, loggerConfiguration) =>

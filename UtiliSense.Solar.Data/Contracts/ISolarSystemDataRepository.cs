@@ -2,7 +2,7 @@
 
 namespace UtiliSense.Solar.Data.Contracts;
 
-public interface ISolarPowerDataRepository : IDisposable
+public interface ISolarSystemDataRepository : IDisposable
 {
     Task<IEnumerable<SolarPowerActivity>> GetSolarPowerActivityDataAsync();
     Task<SolarPowerActivity> GetSolarPowerActivityDataByDayAsync(DateTime? date);

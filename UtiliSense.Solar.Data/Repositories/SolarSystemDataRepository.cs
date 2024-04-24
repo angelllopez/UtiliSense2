@@ -5,12 +5,12 @@ using UtiliSense.Solar.Data.Models;
 
 namespace UtiliSense.Solar.Data.Repositories;
 
-public class SolarPowerDataRepository : ISolarPowerDataRepository
+public class SolarSystemDataRepository : ISolarSystemDataRepository
 {
     private readonly UtilitiesDbContext _context;
-    private readonly ILogger<SolarPowerDataRepository>? _logger;
+    private readonly ILogger<SolarSystemDataRepository>? _logger;
 
-    public SolarPowerDataRepository(UtilitiesDbContext context, ILogger<SolarPowerDataRepository> logger)
+    public SolarSystemDataRepository(UtilitiesDbContext context, ILogger<SolarSystemDataRepository> logger)
     {
         _context = context;
         _logger = logger;

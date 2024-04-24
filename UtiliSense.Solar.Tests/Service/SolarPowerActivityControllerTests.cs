@@ -19,7 +19,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var stubList = new List<SolarPowerActivity>() { new SolarPowerActivity() };
-            var mockRepo = new Mock<ISolarPowerDataRepository>(MockBehavior.Strict);
+            var mockRepo = new Mock<ISolarSystemDataRepository>(MockBehavior.Strict);
 
             mockRepo.Setup(x =>
                 x.GetSolarPowerActivityDataAsync())
@@ -41,7 +41,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             List<SolarPowerActivity> stubList = new();
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
 
             mockRepo.Setup(x =>
                 x.GetSolarPowerActivityDataAsync())
@@ -62,7 +62,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var stubRecord = new SolarPowerActivity { SolarPowerActivityId = 1 };
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
 
             mockRepo.Setup(x =>
                 x.GetSolarPowerActivityDataByDayAsync(It.IsAny<DateTime>()))
@@ -83,7 +83,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var stubRecord = new SolarPowerActivity();
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
 
             mockRepo.Setup(x =>
                 x.GetSolarPowerActivityDataByDayAsync(It.IsAny<DateTime>()))
@@ -104,7 +104,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var stubList = new List<SolarPowerActivity>() { new SolarPowerActivity() };
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
             mockRepo.Setup(x =>
                        x.GetSolarPowerActivityDataByMonthAsync(It.IsAny<DateTime>()))
                 .ReturnsAsync(stubList);
@@ -124,7 +124,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var stubList = new List<SolarPowerActivity>();
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
             mockRepo.Setup(x =>
                        x.GetSolarPowerActivityDataByMonthAsync(It.IsAny<DateTime>()))
                 .ReturnsAsync(stubList);
@@ -144,7 +144,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var stubList = new List<SolarPowerActivity>() { new SolarPowerActivity() };
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
             mockRepo.Setup(x =>
                 x.GetSolarPowerActivityDataByYearAsync(It.IsAny<DateTime>()))
                 .ReturnsAsync(stubList);
@@ -164,7 +164,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var stubList = new List<SolarPowerActivity>();
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
             mockRepo.Setup(x =>
                 x.GetSolarPowerActivityDataByYearAsync(It.IsAny<DateTime>()))
                 .ReturnsAsync(stubList);
@@ -184,7 +184,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var dummyRecord = new SolarPowerActivity();
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
 
             mockRepo.Setup(x =>
                 x.AddSolarPowerActivityDataAsync(It.IsAny<SolarPowerActivity>()))
@@ -205,7 +205,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var dummyRecord = new SolarPowerActivity();
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
 
             mockRepo.Setup(x =>
                        x.AddSolarPowerActivityDataAsync(It.IsAny<SolarPowerActivity>()))
@@ -225,7 +225,7 @@ namespace UtiliSense.Solar.Tests.Service
         public async Task DeleteSolarPowerActivityDataAsync_ReturnsOk_WhenRecordIsDeleted()
         {
             //Arrange
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
 
             mockRepo.Setup(x =>
                        x.DeleteSolarPowerActivityDataAsync(It.IsAny<int>()))
@@ -245,7 +245,7 @@ namespace UtiliSense.Solar.Tests.Service
         public async Task DeleteSolarPowerActivityDataAsync_ReturnsBadRequest_WhenRecordIsNotDeleted()
         {
             //Arrange
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
 
             mockRepo.Setup(x =>
                               x.DeleteSolarPowerActivityDataAsync(It.IsAny<int>()))
@@ -266,7 +266,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var dummyRecord = new SolarPowerActivity();
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
 
             mockRepo.Setup(x =>
                 x.UpdateSolarPowerActivityDataAsync(It.IsAny<SolarPowerActivity>()))
@@ -287,7 +287,7 @@ namespace UtiliSense.Solar.Tests.Service
         {
             //Arrange
             var dummyRecord = new SolarPowerActivity();
-            var mockRepo = new Mock<ISolarPowerDataRepository>();
+            var mockRepo = new Mock<ISolarSystemDataRepository>();
 
             mockRepo.Setup(x =>
                        x.UpdateSolarPowerActivityDataAsync(It.IsAny<SolarPowerActivity>()))
