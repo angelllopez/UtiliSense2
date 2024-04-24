@@ -45,14 +45,12 @@ jobs:
           build_project() {
           echo "Build $1 project started"
           cd "${{ github.workspace }}/$1"
+          ls
           echo "${{ github.workspace }}/$1"
-          # dotnet build "$1.csproj"
+          dotnet build "UtiliSense.Water.UnitTests.csproj"
           echo "Build $1 project ended"
           }
           
-          build_project "UtiliSense.Gas.Tests"
-          build_project "UtiliSense.Grid.Tests"
-          build_project "UtiliSense.Solar.Tests"
           build_project "UtiliSense.Water.Tests"
-          ls
+
 
