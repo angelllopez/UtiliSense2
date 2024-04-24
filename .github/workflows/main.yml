@@ -45,16 +45,16 @@ jobs:
         run: |
           build_project() {
           echo "Build $1 project started"
-          cd "${{ github.workspace }}/$1"
-          echo "${{ github.workspace }}/$1"
-          dotnet build "$1.csproj"
-          echo "Build $1 project ended"
+          cd "${{ github.workspace }}/$1.Tests"
+          echo "${{ github.workspace }}/$1.Tests"
+          dotnet build "$1.UnitTests.csproj"
+          echo "Build $1.UnitTests project ended"
           }
     
-          build_project "UtiliSense.Gas.Tests"
-          build_project "UtiliSense.Grid.Tests"
-          build_project "UtiliSense.Solar.Tests"
-          build_project "UtiliSense.Water.Tests"
+          build_project "UtiliSense.Gas"
+          build_project "UtiliSense.Grid"
+          build_project "UtiliSense.Solar"
+          build_project "UtiliSense.Water"
 
       - name: Run unit tests projects
         run: dotnet test
