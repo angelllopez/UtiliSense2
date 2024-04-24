@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSense.Grid", "UtiliSen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UtiliSense.Gas", "UtiliSense.Gas", "{F9F8318B-9DF2-4E17-A9AB-4667BBD0A565}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.Tests", "UtiliSense.Gas.Tests\UtiliSense.Gas.Tests.csproj", "{8617B5CE-3BBF-4829-8F84-9C04C26C380C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.UnitTests", "UtiliSense.Gas.Tests\UtiliSense.Gas.UnitTests.csproj", "{8617B5CE-3BBF-4829-8F84-9C04C26C380C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.Tests", "UtiliSense.Grid.Tests\UtiliSense.Grid.Tests.csproj", "{EBD14CBC-350E-4564-8840-0099A066B0A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.UnitTests", "UtiliSense.Grid.Tests\UtiliSense.Grid.UnitTests.csproj", "{EBD14CBC-350E-4564-8840-0099A066B0A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar.Tests", "UtiliSense.Solar.Tests\UtiliSense.Solar.Tests.csproj", "{C6272314-B835-4DE8-A53A-35930081A4F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar.UnitTests", "UtiliSense.Solar.Tests\UtiliSense.Solar.UnitTests.csproj", "{C6272314-B835-4DE8-A53A-35930081A4F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Water.Tests", "UtiliSense.Water.Tests\UtiliSense.Water.Tests.csproj", "{C2BA9039-6ECA-4B0E-80B8-76302ACEF5FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Water.UnitTests", "UtiliSense.Water.Tests\UtiliSense.Water.UnitTests.csproj", "{C2BA9039-6ECA-4B0E-80B8-76302ACEF5FC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.Api", "UtiliSense.Gas\UtiliSense.Gas.Api.csproj", "{2C146546-802D-4B2B-A32E-22FC4F69EA46}"
 EndProject
