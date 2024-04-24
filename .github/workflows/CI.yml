@@ -45,7 +45,6 @@ jobs:
           build_project() {
           echo "Build $1 project started"
           cd "${{ github.workspace }}/$1.Tests"
-          echo "${{ github.workspace }}/$1"
           dotnet build "$1.UnitTests.csproj"
           echo "Build $1 project ended"
           }
@@ -55,3 +54,5 @@ jobs:
           build_project "UtiliSense.Solar"
           build_project "UtiliSense.Water"
 
+      - name: Run unit tests projects
+        run: dotnet test
