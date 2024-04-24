@@ -46,7 +46,7 @@ jobs:
           echo "Build $1 project started"
           cd "${{ github.workspace }}/$1.Tests"
           echo "${{ github.workspace }}/$1"
-          dotnet build "UtiliSense.Gas.UnitTests.csproj"
+          dotnet build "$1.UnitTests.csproj"
           echo "Build $1 project ended"
           }
           
