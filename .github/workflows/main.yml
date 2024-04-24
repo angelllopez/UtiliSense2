@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - '*'
+      - '!master' # Trigger on pushes to branches other than 'master'
   pull_request:
     branches:
-      - '*'
+      - master
 
 jobs:
   build:
@@ -26,8 +27,8 @@ jobs:
         working-directory: ${{ github.workspace }}
 
       - name: Build changed projects
+      # Check if any of the specified project directories have changes.
         run: |
-          # Check if the project directory has changes
           if git diff --name-only ${{ github.base_ref }}..${{ github.head_ref }} | grep -qE '^UtiliSense\\.(Gas|Grid|Solar|Water)/'; then
             echo "Building changed projects"
             # Build only the changed projects
@@ -40,28 +41,20 @@ jobs:
             echo "No changes in project directories. Skipping build."
           fi  
 
-      - name: Build unit tests projects
+      - name: Build unit test projects
         run: |
-            echo "Build UtiliSense.Gas.Tests project started"
-            cd ${{ github.workspace }}/UtiliSense.Gas.Tests
-            dotnet build UtiliSense.Gas.Tests.csproj
-            echo "Build UtiliSense.Gas.Tests project ended" 
+          build_project() {
+          echo "Build $1 project started"
+          cd "${{ github.workspace }}/$1"
+          dotnet build "$1.csproj"
+          echo "Build $1 project ended"
+          }
+    
+          build_project "UtiliSense.Gas.Tests"
+          build_project "UtiliSense.Grid.Tests"
+          build_project "UtiliSense.Solar.Tests"
+          build_project "UtiliSense.Water.Tests"
 
-            
-            echo "Build UtiliSense.Grid.Tests project started"
-            cd ${{ github.workspace }}/UtiliSense.Grid.Tests
-            dotnet build UtiliSense.Grid.Tests.csproj
-            echo "Build UtiliSense.Grid.Tests project ended"
-            
-            echo "Build UtiliSense.Solar.Tests project started"
-            cd ${{ github.workspace }}/UtiliSense.Solar.Tests            
-            dotnet build UtiliSense.Solar.Tests.csproj
-            echo "Build UtiliSense.Solar.Tests project ended"
-            
-            echo "Build UtiliSense.Water.Tests project started"
-            cd ${{ github.workspace }}/UtiliSense.Water.Tests
-            dotnet build UtiliSense.Water.Tests.csproj
-            echo "Build UtiliSense.Water.Tests project ended"
-            
       - name: Run unit tests projects
         run: dotnet test
+
