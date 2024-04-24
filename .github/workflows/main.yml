@@ -45,7 +45,7 @@ jobs:
         run: |
           build_project() {
           echo "Build $1 project started"
-          cd "${{ github.workspace }}/$1"
+          cd "${{ github.workspace }}/UnitTests/$1"
           dotnet build "$1.csproj"
           echo "Build $1 project ended"
           }
