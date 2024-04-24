@@ -17,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSense.Solar.BizRules\UtiliSense.Solar.BizRules.csproj" />
-    <ProjectReference Include="..\UtiliSense.Solar.Data\UtiliSense.Solar.Data.csproj" />
-    <ProjectReference Include="..\UtiliSense.Solar\UtiliSense.Solar.Api.csproj" />
+    <ProjectReference Include="..\UtiliSense.Grid.BizRules\UtiliSense.Grid.BizRules.csproj" />
+    <ProjectReference Include="..\UtiliSense.Grid.Data\UtiliSense.Grid.Data.csproj" />
+    <ProjectReference Include="..\UtiliSense.Grid\UtiliSense.Grid.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
