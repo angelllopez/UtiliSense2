@@ -50,10 +50,10 @@ jobs:
           echo "Build $1 project ended"
           }
     
-          build_project "UtiliSense.Gas.Tests"
-          build_project "UtiliSense.Grid.Tests"
-          build_project "UtiliSense.Solar.Tests"
-          build_project "UtiliSense.Water.Tests"
+          build_project "UtiliSense.Gas.UnitTests"
+          build_project "UtiliSense.Grid.UnitTests"
+          build_project "UtiliSense.Solar.UnitTests"
+          build_project "UtiliSense.Water.UnitTests"
 
       - name: Run unit tests projects
         run: dotnet test
