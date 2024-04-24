@@ -4,23 +4,23 @@ using UtiliSense.Solar.Data.Models;
 
 namespace UtiliSense.Solar.Controllers;
 
+/// <summary>
+/// This is a restful API controller designed to facilite the management of data
+/// related to the production and consumption of of electricity produced by a
+/// solar power system.
+/// </summary>
+/// <remarks>
+/// Initializes a new instance of the SolarPowerActivityController class.
+/// </remarks>
+/// <param name="repo">
+/// An ISolarPowerDataRepository type that represents the dependency injected.
+/// Solar Power Data repository interface
+/// </param>
 [Route("api/[controller]")]
 [ApiController]
-public class SolarPowerActivityController : ControllerBase
+public class SolarPowerActivityController(ISolarPowerDataRepository repo) : ControllerBase
 {
-    private readonly ISolarPowerDataRepository _repo;
-
-    /// <summary>
-    /// Initializes a new instance of the SolarPowerActivityController class.
-    /// </summary>
-    /// <param name="repo">
-    /// An ISolarPowerDataRepository type that represents the dependency injected.
-    /// Solar Power Data repository interface
-    /// </param>
-    public SolarPowerActivityController(ISolarPowerDataRepository repo)
-    {
-        _repo = repo;
-    }
+    private readonly ISolarPowerDataRepository _repo = repo;
 
     /// <summary>
     /// Retrieves all the solar power activity data records. 
