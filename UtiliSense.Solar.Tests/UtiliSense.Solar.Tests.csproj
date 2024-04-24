@@ -28,7 +28,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UtiliSense.Solar.Data\UtiliSense.Solar.Data.csproj" />
-    <ProjectReference Include="..\UtiliSense.Solar\UtiliSense.Solar.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
