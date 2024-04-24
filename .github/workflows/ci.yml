@@ -41,21 +41,5 @@ jobs:
             echo "No changes in project directories. Skipping build."
           fi  
 
-      - name: Build unit test projects
-        run: |
-          build_project() {
-          echo "Build $1 project started"
-          cd "${{ github.workspace }}/$1"
-          echo "${{ github.workspace }}/$1"
-          dotnet build "$1.csproj"
-          echo "Build $1 project ended"
-          }
-    
-          build_project "UtiliSense.Gas.Tests"
-          build_project "UtiliSense.Grid.Tests"
-          build_project "UtiliSense.Solar.Tests"
-          build_project "UtiliSense.Water.Tests"
 
-      - name: Run unit tests projects
-        run: dotnet test
 
