@@ -5,7 +5,7 @@ namespace UtiliSense.Gas.BizRules.Contracts;
 public interface IRules
 {
     Task<IEnumerable<GasConsumption>> GetGasConsumptionsAsync();
-    Task<IEnumerable<GasConsumption>> GetGasConsumptionByDayAsync(DateTime date);
+    Task<GasConsumption?> GetGasConsumptionByDayAsync(DateTime date);
     Task<IEnumerable<GasConsumption>> GetGasConsumptionByYearAsync(DateTime date);
     Task<IEnumerable<GasConsumption>> GetGasConsumptionByMonthAsync(DateTime date);
     Task<bool> InsertGasConsumption(GasConsumption gasConsumption);

@@ -1,6 +1,7 @@
 ﻿using UtiliSense.Gas.BizRules.Contracts;
 using UtiliSense.Gas.Data.Contracts;
 using UtiliSense.Gas.Data.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace UtiliSense.Gas.BizRules.RulesBook;
 
@@ -35,37 +36,114 @@ public class Rules : IRules
                     gasConsumptionId), nameof(gasConsumptionId));
             }
 
-            return await _repo.DeleteGasConsumption(gasConsumptionId);
+            return await _repo.DeleteGasConsumptionAsync(gasConsumptionId);
         }
-        catch (ArgumentException)
+        catch (Exception)
         {
             return false;
         }
     }
 
-    public Task<IEnumerable<GasConsumption>> GetGasConsumptionByDayAsync(DateTime date)
+    public async Task<GasConsumption?> GetGasConsumptionByDayAsync(DateTime date)
     {
-        throw new NotImplementedException();
+        try
+        {
+            if (date < new DateTime(2023, 1, 1) || date > DateTime.UtcNow)
+            {
+                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", date), nameof(date));
+            }
+
+            return await _repo.GetGasConsumptionByDayAsync(date);
+        }
+        catch (Exception)
+        {
+            return null;
+        }
     }
 
-    public Task<IEnumerable<GasConsumption>> GetGasConsumptionByMonthAsync(DateTime date)
+    public async Task<IEnumerable<GasConsumption>> GetGasConsumptionByMonthAsync(DateTime date)
     {
-        throw new NotImplementedException();
+        try
+        {
+            if (date < new DateTime(2023, 1, 1) || date > DateTime.UtcNow)
+            {
+                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", date), nameof(date));
+            }
+
+            return await _repo.GetGasConsumptionByMonthAsync(date);
+        }
+        catch (Exception)
+        {
+            return [];
+        }
     }
 
-    public Task<IEnumerable<GasConsumption>> GetGasConsumptionByYearAsync(DateTime date)
+    public async Task<IEnumerable<GasConsumption>> GetGasConsumptionByYearAsync(DateTime date)
     {
-        throw new NotImplementedException();
+        try
+        {
+            if (date < new DateTime(2023, 1, 1) || date > DateTime.UtcNow)
+            {
+                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", date), nameof(date));
+            }
+
+            return await _repo.GetGasConsumptionByYearAsync(date);
+        }
+        catch (Exception)
+        {
+            return [];
+        }
     }
 
-    public Task<IEnumerable<GasConsumption>> GetGasConsumptionsAsync()
+    public async Task<IEnumerable<GasConsumption>> GetGasConsumptionsAsync()
     {
-        throw new NotImplementedException();
+        try
+        {
+            return await _repo.GetGasConsumptionsAsync();
+        }
+        catch (Exception)
+        {
+            return [];
+        }
     }
 
-    public Task<bool> InsertGasConsumption(GasConsumption gasConsumption)
+    public async Task<bool> InsertGasConsumption(GasConsumption gasConsumption)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var test = DateOnly.FromDateTime(DateTime.UtcNow);
+            if (gasConsumption.ConsumptionDate > test)
+            {
+                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.",
+                    gasConsumption.ConsumptionDate), nameof(gasConsumption.ConsumptionDate));
+            }
+
+            if (gasConsumption.ConsumptionDate < DateOnly.FromDateTime(new DateTime(2023, 1, 1)))
+            {
+                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.",
+                    gasConsumption.ConsumptionDate), nameof(gasConsumption.ConsumptionDate));
+            }
+
+            //if (gasConsumption.ConsumptionDate < DateOnly.FromDateTime(new DateTime(2023, 1, 1)) 
+            //    || gasConsumption.ConsumptionDate < DateOnly.FromDateTime(DateTime.UtcNow))
+            //{
+            //    throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", 
+            //        gasConsumption.ConsumptionDate), nameof(gasConsumption.ConsumptionDate));
+            //}
+
+            if (gasConsumption.GasConsumptionCcf <= 0)
+            {
+                throw new ArgumentException(string.Format("{0} is an invalid value.", 
+                                       gasConsumption.GasConsumptionCcf), nameof(gasConsumption.GasConsumptionCcf));
+            }
+
+            return await _repo.InsertGasConsumptionAsync(gasConsumption);
+
+        }
+        catch (Exception)
+        {
+            return false;
+        }
     }
 
     public void Save()

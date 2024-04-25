@@ -5,7 +5,7 @@ namespace UtiliSense.Gas.Data.Repository
 {
     public class GasConsumptionRepository : IGasConsumptionRepository
     {
-        public Task<bool> DeleteGasConsumption(int gasConsumptionId)
+        public Task<bool> DeleteGasConsumptionAsync(int gasConsumptionId)
         {
             throw new NotImplementedException();
         }
@@ -15,7 +15,7 @@ namespace UtiliSense.Gas.Data.Repository
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<GasConsumption>> GetGasConsumptionByDayAsync(DateTime date)
+        public Task<GasConsumption> GetGasConsumptionByDayAsync(DateTime date)
         {
             throw new NotImplementedException();
         }
@@ -35,7 +35,7 @@ namespace UtiliSense.Gas.Data.Repository
             throw new NotImplementedException();
         }
 
-        public Task<bool> InsertGasConsumption(GasConsumption gasConsumption)
+        public Task<bool> InsertGasConsumptionAsync(GasConsumption gasConsumption)
         {
             throw new NotImplementedException();
         }
@@ -45,7 +45,7 @@ namespace UtiliSense.Gas.Data.Repository
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateGasConsumption(GasConsumption gasConsumption)
+        public Task<bool> UpdateGasConsumptionAsync(GasConsumption gasConsumption)
         {
             throw new NotImplementedException();
         }
