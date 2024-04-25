@@ -1,7 +1,7 @@
 ﻿using UtiliSense.Gas.BizRules.Contracts;
 using UtiliSense.Gas.Data.Contracts;
 using UtiliSense.Gas.Data.Models;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using UtiliSense.Gas.Data.Repository;
 
 namespace UtiliSense.Gas.BizRules.RulesBook;
 
@@ -11,10 +11,23 @@ namespace UtiliSense.Gas.BizRules.RulesBook;
 public class Rules : IRules
 {
     private readonly IGasConsumptionRepository _repo;
+    private readonly ICoreServices _coreServices;
 
-    public Rules(IGasConsumptionRepository repo)
+    public Rules()
+    {
+        _repo = new GasConsumptionRepository();
+        _coreServices = new CoreServices();
+    }
+
+    /// <summary>
+    /// Constructor for testing purposes.
+    /// </summary>
+    /// <param name="repo"></param>
+    /// <param name="coreServices"></param>
+    public Rules(IGasConsumptionRepository repo, ICoreServices coreServices)
     {
         _repo = repo;
+        _coreServices = coreServices;
     }
 
     /// <summary>
@@ -48,7 +61,7 @@ public class Rules : IRules
     {
         try
         {
-            if (date < new DateTime(2023, 1, 1) || date > DateTime.UtcNow)
+            if (!_coreServices.IsDateValid(date))
             {
                 throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", date), nameof(date));
             }
@@ -65,7 +78,7 @@ public class Rules : IRules
     {
         try
         {
-            if (date < new DateTime(2023, 1, 1) || date > DateTime.UtcNow)
+            if (!_coreServices.IsDateValid(date))
             {
                 throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", date), nameof(date));
             }
@@ -82,7 +95,7 @@ public class Rules : IRules
     {
         try
         {
-            if (date < new DateTime(2023, 1, 1) || date > DateTime.UtcNow)
+            if (!_coreServices.IsDateValid(date))
             {
                 throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", date), nameof(date));
             }
@@ -111,8 +124,7 @@ public class Rules : IRules
     {
         try
         {
-            var test = DateOnly.FromDateTime(DateTime.UtcNow);
-            if (gasConsumption.ConsumptionDate > test)
+            if (gasConsumption.ConsumptionDate > DateOnly.FromDateTime(DateTime.UtcNow))
             {
                 throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.",
                     gasConsumption.ConsumptionDate), nameof(gasConsumption.ConsumptionDate));
@@ -138,7 +150,6 @@ public class Rules : IRules
             }
 
             return await _repo.InsertGasConsumptionAsync(gasConsumption);
-
         }
         catch (Exception)
         {
