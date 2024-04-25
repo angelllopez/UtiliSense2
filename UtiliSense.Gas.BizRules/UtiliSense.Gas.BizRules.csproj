@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UtiliSense.Gas.Data\UtiliSense.Gas.Data.csproj" />
+  </ItemGroup>
+
 </Project>

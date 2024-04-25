@@ -38,7 +38,6 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="BizRules\" />
     <Folder Include="Endpoints\" />
   </ItemGroup>
 

@@ -17,4 +17,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UtiliSense.Gas.BizRules\UtiliSense.Gas.BizRules.csproj" />
+    <ProjectReference Include="..\UtiliSense.Gas.Data\UtiliSense.Gas.Data.csproj" />
+  </ItemGroup>
+
 </Project>
