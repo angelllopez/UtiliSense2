@@ -65,9 +65,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BizRules", "BizRules", "{A3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BizRules", "BizRules", "{DF21099C-1440-4995-B052-56CF6A1AB673}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BizRules", "BizRules", "{297B862C-7372-46D2-9480-7048312A409C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessRules", "BusinessRules", "{297B862C-7372-46D2-9480-7048312A409C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.BizRules", "UtiliSense.Gas.BizRules\UtiliSense.Gas.BizRules.csproj", "{2741D48D-28D8-4E90-B322-839A366E5DC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.BusinessRules", "UtiliSense.Gas.BizRules\UtiliSense.Gas.BusinessRules.csproj", "{2741D48D-28D8-4E90-B322-839A366E5DC4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.BizRules", "UtiliSense.Grid.BizRules\UtiliSense.Grid.BizRules.csproj", "{0B3EA6F2-CFA4-49A7-A337-E99351689F58}"
 EndProject
@@ -93,11 +93,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunctionalTests", "Function
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar.FunctionalTests", "UtiliSense.Solar.FunctionalTests\UtiliSense.Solar.FunctionalTests.csproj", "{1CB3F02B-AAF9-4AF0-A8D6-E8D44745EE29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Gas.FunctionalTests", "UtiliSense.Gas.FunctionalTests\UtiliSense.Gas.FunctionalTests.csproj", "{010B0F85-BD53-4411-8AEF-FD7BBFC975A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.FunctionalTests", "UtiliSense.Gas.FunctionalTests\UtiliSense.Gas.FunctionalTests.csproj", "{010B0F85-BD53-4411-8AEF-FD7BBFC975A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Grid.FunctionalTests", "UtiliSense.Grid.FunctionalTests\UtiliSense.Grid.FunctionalTests.csproj", "{003AC340-C1F0-4039-85C6-1AD4DF1C99B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.FunctionalTests", "UtiliSense.Grid.FunctionalTests\UtiliSense.Grid.FunctionalTests.csproj", "{003AC340-C1F0-4039-85C6-1AD4DF1C99B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Water.FunctionalTests", "UtiliSense.Water.FunctionalTests\UtiliSense.Water.FunctionalTests.csproj", "{FAED1912-BA14-45F6-8412-88E243D397B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Water.FunctionalTests", "UtiliSense.Water.FunctionalTests\UtiliSense.Water.FunctionalTests.csproj", "{FAED1912-BA14-45F6-8412-88E243D397B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
