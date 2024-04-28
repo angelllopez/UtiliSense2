@@ -3,7 +3,7 @@ using UtiliSense.Gas.Data.Models;
 
 namespace UtiliSense.Gas.Data.Repository;
 
-public class GasConsumptionRepository : IGasConsumptionRepository
+public class GasConsumptionRepository : IConsumptionDataRepository
 {
     public Task<bool> DeleteGasConsumptionAsync(int gasConsumptionId)
     {
@@ -15,17 +15,17 @@ public class GasConsumptionRepository : IGasConsumptionRepository
         throw new NotImplementedException();
     }
 
-    public Task<GasConsumption> GetGasConsumptionByDayAsync(DateTime date)
+    public Task<GasConsumption> GetGasConsumptionByDayAsync(DateOnly date)
     {
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<GasConsumption>> GetGasConsumptionByMonthAsync(DateTime date)
+    public Task<IEnumerable<GasConsumption>> GetGasConsumptionByMonthAsync(DateOnly date)
     {
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<GasConsumption>> GetGasConsumptionByYearAsync(DateTime date)
+    public Task<IEnumerable<GasConsumption>> GetGasConsumptionByYearAsync(DateOnly date)
     {
         throw new NotImplementedException();
     }

@@ -1,112 +1,16 @@
 ﻿using UtiliSense.Gas.BizRules.Contracts;
 using UtiliSense.Gas.Data.Contracts;
 using UtiliSense.Gas.Data.Models;
-using UtiliSense.Gas.Data.Repository;
 
 namespace UtiliSense.Gas.BizRules.RulesBook;
 
 /// <summary>
 /// Business rules for GasConsumption.
 /// </summary>
-public class Rules : IRules
+public class Rules(IConsumptionDataRepository repo, IConsumptionDataValidationHelper helper) : IRules
 {
-    private readonly IGasConsumptionRepository _repo;
-    private readonly ICoreServices _coreServices;
-
-    public Rules()
-    {
-        _repo = new GasConsumptionRepository();
-        _coreServices = new CoreServices();
-    }
-
-    /// <summary>
-    /// Constructor for testing purposes.
-    /// </summary>
-    /// <param name="repo"></param>
-    /// <param name="coreServices"></param>
-    public Rules(IGasConsumptionRepository repo, ICoreServices coreServices)
-    {
-        _repo = repo;
-        _coreServices = coreServices;
-    }
-
-    /// <summary>
-    /// Validates the consumption data record id againts the business rules. If the id is valid,
-    /// it passes it to the repository's delete operation to be asynchronously deleted from the
-    /// database. The result of the operation is then returned. If the id is invalid, it throws
-    /// an exception.
-    /// </summary>
-    /// <param name="gasConsumptionId"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
-    public async Task<bool> DeleteGasConsumptionAsync(int gasConsumptionId)
-    {
-        try
-        {
-            if (gasConsumptionId <= 0)
-            {
-                throw new ArgumentException(string.Format("{0} is an invalid value.", 
-                    gasConsumptionId), nameof(gasConsumptionId));
-            }
-
-            return await _repo.DeleteGasConsumptionAsync(gasConsumptionId);
-        }
-        catch (Exception)
-        {
-            return false;
-        }
-    }
-
-    public async Task<GasConsumption?> GetGasConsumptionByDayAsync(DateTime date)
-    {
-        try
-        {
-            if (!_coreServices.IsDateValid(date))
-            {
-                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", date), nameof(date));
-            }
-
-            return await _repo.GetGasConsumptionByDayAsync(date);
-        }
-        catch (Exception)
-        {
-            return null;
-        }
-    }
-
-    public async Task<IEnumerable<GasConsumption>> GetGasConsumptionByMonthAsync(DateTime date)
-    {
-        try
-        {
-            if (!_coreServices.IsDateValid(date))
-            {
-                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", date), nameof(date));
-            }
-
-            return await _repo.GetGasConsumptionByMonthAsync(date);
-        }
-        catch (Exception)
-        {
-            return [];
-        }
-    }
-
-    public async Task<IEnumerable<GasConsumption>> GetGasConsumptionByYearAsync(DateTime date)
-    {
-        try
-        {
-            if (!_coreServices.IsDateValid(date))
-            {
-                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", date), nameof(date));
-            }
-
-            return await _repo.GetGasConsumptionByYearAsync(date);
-        }
-        catch (Exception)
-        {
-            return [];
-        }
-    }
+    private readonly IConsumptionDataRepository _repo = repo;
+    private readonly IConsumptionDataValidationHelper _helper = helper;
 
     public async Task<IEnumerable<GasConsumption>> GetGasConsumptionsAsync()
     {
@@ -120,49 +24,97 @@ public class Rules : IRules
         }
     }
 
+    public async Task<GasConsumption?> GetGasConsumptionByDayAsync(DateOnly consumptionDate)
+    {
+        try
+        {
+            _helper.ValidateConsumptionDate(consumptionDate);
+            return await _repo.GetGasConsumptionByDayAsync(consumptionDate);
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
+
+    public async Task<IEnumerable<GasConsumption>> GetGasConsumptionByYearAsync(DateOnly consumptionDate)
+    {
+        try
+        {
+            _helper.ValidateConsumptionDate(consumptionDate);
+            return await _repo.GetGasConsumptionByYearAsync(consumptionDate);
+        }
+        catch (Exception)
+        {
+            return [];
+        }
+    }
+
+    public async Task<IEnumerable<GasConsumption>> GetGasConsumptionByMonthAsync(DateOnly consumptionDate)
+    {
+        try
+        {
+            _helper.ValidateConsumptionDate(consumptionDate);
+            return await _repo.GetGasConsumptionByMonthAsync(consumptionDate);
+        }
+        catch (Exception)
+        {
+            return [];
+        }
+    }
+
     public async Task<bool> InsertGasConsumption(GasConsumption gasConsumption)
     {
         try
         {
-            if (gasConsumption.ConsumptionDate > DateOnly.FromDateTime(DateTime.UtcNow))
-            {
-                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.",
-                    gasConsumption.ConsumptionDate), nameof(gasConsumption.ConsumptionDate));
-            }
-
-            if (gasConsumption.ConsumptionDate < DateOnly.FromDateTime(new DateTime(2023, 1, 1)))
-            {
-                throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.",
-                    gasConsumption.ConsumptionDate), nameof(gasConsumption.ConsumptionDate));
-            }
-
-            //if (gasConsumption.ConsumptionDate < DateOnly.FromDateTime(new DateTime(2023, 1, 1)) 
-            //    || gasConsumption.ConsumptionDate < DateOnly.FromDateTime(DateTime.UtcNow))
-            //{
-            //    throw new ArgumentOutOfRangeException(string.Format("{0} is out of range.", 
-            //        gasConsumption.ConsumptionDate), nameof(gasConsumption.ConsumptionDate));
-            //}
-
-            if (gasConsumption.GasConsumptionCcf <= 0)
-            {
-                throw new ArgumentException(string.Format("{0} is an invalid value.", 
-                                       gasConsumption.GasConsumptionCcf), nameof(gasConsumption.GasConsumptionCcf));
-            }
+            _helper.ValidateConsumptionDate(gasConsumption.ConsumptionDate);
+            _helper.ValidateGasConsumptionCcf(gasConsumption.GasConsumptionCcf);
+            _helper.ValidateAvgTemp(gasConsumption.AvgTemp);
+            _helper.ValidateHighTemp(gasConsumption.HighTemp);
+            _helper.ValidateLowTemp(gasConsumption.LowTemp);
+            _helper.ValidateBillingMonth(gasConsumption.BillingMonth);
 
             return await _repo.InsertGasConsumptionAsync(gasConsumption);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             return false;
         }
     }
 
-    public void Save()
+    public async Task<bool> DeleteGasConsumptionAsync(int gasConsumptionId)
+      {
+          try
+          {
+              _helper.ValidateConsumptionId(gasConsumptionId);
+              return await _repo.DeleteGasConsumptionAsync(gasConsumptionId);
+          }
+          catch (Exception)
+          {
+              return false;
+          }
+      }
+    public async Task<bool> UpdateGasConsumption(GasConsumption gasConsumption)
     {
-        throw new NotImplementedException();
+        try
+        {
+            _helper.ValidateConsumptionDate(gasConsumption.ConsumptionDate);
+            _helper.ValidateGasConsumptionCcf(gasConsumption.GasConsumptionCcf);
+            _helper.ValidateAvgTemp(gasConsumption.AvgTemp);
+            _helper.ValidateHighTemp(gasConsumption.HighTemp);
+            _helper.ValidateLowTemp(gasConsumption.LowTemp);
+            _helper.ValidateBillingMonth(gasConsumption.BillingMonth);
+
+            return await _repo.UpdateGasConsumptionAsync(gasConsumption);
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+
     }
 
-    public Task<bool> UpdateGasConsumption(GasConsumption gasConsumption)
+    public void Save()
     {
         throw new NotImplementedException();
     }
