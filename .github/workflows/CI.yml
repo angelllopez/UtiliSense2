@@ -54,5 +54,5 @@ jobs:
           build_project "UtiliSense.Solar"
           build_project "UtiliSense.Water"
 
-     # - name: Run unit tests projects
-     #   run: dotnet test
+      - name: Run unit tests projects
+        run: dotnet test
