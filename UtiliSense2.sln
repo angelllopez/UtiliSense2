@@ -67,7 +67,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{297B862C-7372-46D2-9480-7048312A409C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.BusinessRules", "UtiliSense.Gas.BizRules\UtiliSense.Gas.BusinessRules.csproj", "{2741D48D-28D8-4E90-B322-839A366E5DC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.Services", "UtiliSense.Gas.BizRules\UtiliSense.Gas.Services.csproj", "{2741D48D-28D8-4E90-B322-839A366E5DC4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.BizRules", "UtiliSense.Grid.BizRules\UtiliSense.Grid.BizRules.csproj", "{0B3EA6F2-CFA4-49A7-A337-E99351689F58}"
 EndProject

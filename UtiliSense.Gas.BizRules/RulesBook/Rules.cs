@@ -1,9 +1,9 @@
-﻿using UtiliSense.Gas.BizRules.Contracts;
+﻿using UtiliSense.Gas.Services.Contracts;
 using UtiliSense.Gas.Data.Contracts;
 using UtiliSense.Gas.Data.Models;
 using UtiliSense.Gas.Data.Repository;
 
-namespace UtiliSense.Gas.BizRules.RulesBook;
+namespace UtiliSense.Gas.Services.RulesBook;
 
 /// <summary>
 /// Business rules for GasConsumption.

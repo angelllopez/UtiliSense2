@@ -1,6 +1,6 @@
 ﻿using UtiliSense.Gas.Data.Models;
 
-namespace UtiliSense.Gas.BizRules.Contracts;
+namespace UtiliSense.Gas.Services.Contracts;
 
 public interface IRules
 {
