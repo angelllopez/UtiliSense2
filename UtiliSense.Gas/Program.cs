@@ -1,7 +1,7 @@
 using UtiliSense.Gas.Data.Contracts;
 using UtiliSense.Gas.Data.Repository;
-using UtiliSense.Gas.BizRules.Contracts;
-using UtiliSense.Gas.BizRules.RulesBook;
+using UtiliSense.Gas.Services.Contracts;
+using UtiliSense.Gas.Services.RulesBook;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,6 +1,6 @@
-﻿using UtiliSense.Gas.BizRules.Contracts;
+﻿using UtiliSense.Gas.Services.Contracts;
 
-namespace UtiliSense.Gas.BizRules;
+namespace UtiliSense.Gas.Services;
 
 public class CoreServices : ICoreServices
 {
