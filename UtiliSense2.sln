@@ -83,13 +83,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{01F014D6-3E38-455D-8893-8E856A1356A8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunctionalTests", "FunctionalTests", "{A45940D9-2FBC-4AF4-A0D7-728960BBF622}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{A45940D9-2FBC-4AF4-A0D7-728960BBF622}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunctionalTests", "FunctionalTests", "{892F6F18-9E71-4A2E-A0BC-A0726B632F64}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{892F6F18-9E71-4A2E-A0BC-A0726B632F64}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunctionalTests", "FunctionalTests", "{DD6F74CA-388B-422B-B98A-30DE29E57C8D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{DD6F74CA-388B-422B-B98A-30DE29E57C8D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunctionalTests", "FunctionalTests", "{33BAF900-CD37-4049-8CA4-91EF190EE60B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{33BAF900-CD37-4049-8CA4-91EF190EE60B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar.FunctionalTests", "UtiliSense.Solar.FunctionalTests\UtiliSense.Solar.FunctionalTests.csproj", "{1CB3F02B-AAF9-4AF0-A8D6-E8D44745EE29}"
 EndProject
