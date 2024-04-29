@@ -73,7 +73,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.Services", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar.Services", "UtiliSense.Solar.BizRules\UtiliSense.Solar.Services.csproj", "{02DF89E4-A7E4-4A46-9C65-A0F66F67D602}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Water.BizRules", "UtiliSense.Water.BizRules\UtiliSense.Water.BizRules.csproj", "{E7C7C22D-708E-4E23-97D2-00015C314576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Water.Services", "UtiliSense.Water.BizRules\UtiliSense.Water.Services.csproj", "{E7C7C22D-708E-4E23-97D2-00015C314576}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{D9A0E732-9DCD-407B-A6AC-957362824EE1}"
 EndProject
