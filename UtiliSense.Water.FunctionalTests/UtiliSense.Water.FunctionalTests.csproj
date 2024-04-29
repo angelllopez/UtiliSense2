@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSense.Water.BizRules\UtiliSense.Water.BizRules.csproj" />
+    <ProjectReference Include="..\UtiliSense.Water.BizRules\UtiliSense.Water.Services.csproj" />
     <ProjectReference Include="..\UtiliSense.Water.Data\UtiliSense.Water.Data.csproj" />
     <ProjectReference Include="..\UtiliSense.Water\UtiliSense.Water.Api.csproj" />
   </ItemGroup>
