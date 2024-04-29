@@ -71,7 +71,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.Services", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.Services", "UtiliSense.Grid.BizRules\UtiliSense.Grid.Services.csproj", "{0B3EA6F2-CFA4-49A7-A337-E99351689F58}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar.BizRules", "UtiliSense.Solar.BizRules\UtiliSense.Solar.BizRules.csproj", "{02DF89E4-A7E4-4A46-9C65-A0F66F67D602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar.Services", "UtiliSense.Solar.BizRules\UtiliSense.Solar.Services.csproj", "{02DF89E4-A7E4-4A46-9C65-A0F66F67D602}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Water.BizRules", "UtiliSense.Water.BizRules\UtiliSense.Water.BizRules.csproj", "{E7C7C22D-708E-4E23-97D2-00015C314576}"
 EndProject
