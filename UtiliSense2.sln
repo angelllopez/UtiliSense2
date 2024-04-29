@@ -93,7 +93,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "Integra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar.IntegrationTests", "UtiliSense.Solar.FunctionalTests\UtiliSense.Solar.IntegrationTests.csproj", "{1CB3F02B-AAF9-4AF0-A8D6-E8D44745EE29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.FunctionalTests", "UtiliSense.Gas.FunctionalTests\UtiliSense.Gas.FunctionalTests.csproj", "{010B0F85-BD53-4411-8AEF-FD7BBFC975A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.IntegrationTests", "UtiliSense.Gas.FunctionalTests\UtiliSense.Gas.IntegrationTests.csproj", "{010B0F85-BD53-4411-8AEF-FD7BBFC975A6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.IntegrationTests", "UtiliSense.Grid.FunctionalTests\UtiliSense.Grid.IntegrationTests.csproj", "{003AC340-C1F0-4039-85C6-1AD4DF1C99B0}"
 EndProject
