@@ -95,7 +95,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Solar.Integratio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Gas.FunctionalTests", "UtiliSense.Gas.FunctionalTests\UtiliSense.Gas.FunctionalTests.csproj", "{010B0F85-BD53-4411-8AEF-FD7BBFC975A6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.FunctionalTests", "UtiliSense.Grid.FunctionalTests\UtiliSense.Grid.FunctionalTests.csproj", "{003AC340-C1F0-4039-85C6-1AD4DF1C99B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Grid.IntegrationTests", "UtiliSense.Grid.FunctionalTests\UtiliSense.Grid.IntegrationTests.csproj", "{003AC340-C1F0-4039-85C6-1AD4DF1C99B0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtiliSense.Water.IntegrationTests", "UtiliSense.Water.FunctionalTests\UtiliSense.Water.IntegrationTests.csproj", "{FAED1912-BA14-45F6-8412-88E243D397B5}"
 EndProject
