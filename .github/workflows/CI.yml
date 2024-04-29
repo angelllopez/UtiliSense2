@@ -43,10 +43,10 @@ jobs:
       - name: Build unit test projects
         run: |
           build_project() {
-          echo "Build $1 project started"
+          echo "Build $1 unit tests project started"
           cd "${{ github.workspace }}/$1.Tests"
           dotnet build "$1.UnitTests.csproj"
-          echo "Build $1 project ended"
+          echo "Build $1 unit tests project ended"
           }
           
           build_project "UtiliSense.Gas"
@@ -56,3 +56,17 @@ jobs:
 
       - name: Run unit tests projects
         run: dotnet test
+        
+      - name: Build integration test projects
+        run: |
+          build_project() {
+          echo "Build $1 integration test project started"
+          cd "${{ github.workspace }}/$1.Tests"
+          dotnet build "$1.IntegrationTests.csproj"
+          echo "Build $1 integration test project project ended"
+          }
+          
+          build_project "UtiliSense.Gas"
+          build_project "UtiliSense.Grid"
+          build_project "UtiliSense.Solar"
+          build_project "UtiliSense.Water"
