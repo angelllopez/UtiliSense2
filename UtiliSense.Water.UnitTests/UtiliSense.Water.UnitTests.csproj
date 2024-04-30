@@ -10,6 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BizRules\**" />
+    <Compile Remove="Data\**" />
+    <Compile Remove="Endpoints\**" />
+    <EmbeddedResource Remove="BizRules\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Endpoints\**" />
+    <None Remove="BizRules\**" />
+    <None Remove="Data\**" />
+    <None Remove="Endpoints\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="coverlet.collector" Version="6.0.2">
       <PrivateAssets>all</PrivateAssets>
@@ -27,18 +39,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSense.Water.Data\UtiliSense.Water.Data.csproj" />
-    <ProjectReference Include="..\UtiliSense.Water\UtiliSense.Water.Api.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="BizRules\" />
-    <Folder Include="Endpoints\" />
+    <ProjectReference Include="..\UtiliSense.Water.Data\UtiliSense.Water.Data.csproj" />
+    <ProjectReference Include="..\UtiliSense.Water.Services\UtiliSense.Water.Services.csproj" />
+    <ProjectReference Include="..\UtiliSense.Water\UtiliSense.Water.Api.csproj" />
   </ItemGroup>
 
 </Project>
