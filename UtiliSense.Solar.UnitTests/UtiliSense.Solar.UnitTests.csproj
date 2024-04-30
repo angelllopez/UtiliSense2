@@ -10,6 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BizRules\**" />
+    <Compile Remove="Data\**" />
+    <EmbeddedResource Remove="BizRules\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="BizRules\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="coverlet.collector" Version="6.0.2">
       <PrivateAssets>all</PrivateAssets>
@@ -27,18 +36,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSense.Solar.BizRules\UtiliSense.Solar.Services.csproj" />
     <ProjectReference Include="..\UtiliSense.Solar.Data\UtiliSense.Solar.Data.csproj" />
     <ProjectReference Include="..\UtiliSense.Solar\UtiliSense.Solar.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Using Include="Xunit" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="BizRules\" />
   </ItemGroup>
 
 </Project>
