@@ -40,12 +40,15 @@ jobs:
           else
             echo "No changes in project directories. Skipping build."
           fi  
+          
       - name: Build unit test projects
         run: |
           build_project() {
           echo "Build $1 project started"
           cd "${{ github.workspace }}/$1.Tests"
           dotnet build "$1.UnitTests.csproj"
+          cd "${{ github.workspace }}/$1.Tests.FunctionalTests"
+          dotnet build "$1.IntegrationTests.csproj"
           echo "Build $1 project ended"
           }
           
