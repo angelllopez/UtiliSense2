@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\UtiliSense.Gas.BizRules\UtiliSense.Gas.Services.csproj" />
     <ProjectReference Include="..\UtiliSense.Gas.Data\UtiliSense.Gas.Data.csproj" />
+    <ProjectReference Include="..\UtiliSense.Gas.Services\UtiliSense.Gas.Services.csproj" />
   </ItemGroup>
 
 </Project>
