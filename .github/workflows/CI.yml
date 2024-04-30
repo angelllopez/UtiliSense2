@@ -44,10 +44,10 @@ jobs:
       - name: Build Unit Tests projects
         run: |
           build_project() {
-          echo "Build $1 project started"
-          cd "${{ github.workspace }}/$1.Tests"
+          echo "Build $1 Unit Tests project started"
+          cd "${{ github.workspace }}/$1.UnitTests"
           dotnet build "$1.UnitTests.csproj"
-          echo "Build $1 project ended"
+          echo "Build $1 Unit Tests project ended"
           }
           
           build_project "UtiliSense.Gas"
