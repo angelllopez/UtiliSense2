@@ -17,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSense.Gas.BizRules\UtiliSense.Gas.Services.csproj" />
+    <ProjectReference Include="..\UtiliSense.Gas.Services\UtiliSense.Gas.Services.csproj" />
     <ProjectReference Include="..\UtiliSense.Gas.Data\UtiliSense.Gas.Data.csproj" />
-    <ProjectReference Include="..\UtiliSense.Gas\UtiliSense.Gas.Api.csproj" />
+    <ProjectReference Include="..\UtiliSense.Gas.EndPoints\UtiliSense.Gas.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
