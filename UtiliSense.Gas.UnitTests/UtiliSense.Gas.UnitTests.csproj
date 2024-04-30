@@ -10,6 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Compile Remove="Endpoints\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Endpoints\**" />
+    <None Remove="Data\**" />
+    <None Remove="Endpoints\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="coverlet.collector" Version="6.0.2">
       <PrivateAssets>all</PrivateAssets>
@@ -27,7 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtiliSense.Gas.BizRules\UtiliSense.Gas.Services.csproj" />
     <ProjectReference Include="..\UtiliSense.Gas.Data\UtiliSense.Gas.Data.csproj" />
     <ProjectReference Include="..\UtiliSense.Gas.Services\UtiliSense.Gas.Services.csproj" />
     <ProjectReference Include="..\UtiliSense.Gas\UtiliSense.Gas.Api.csproj" />
@@ -35,11 +43,6 @@
 
   <ItemGroup>
     <Using Include="Xunit" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Endpoints\" />
   </ItemGroup>
 
 </Project>
