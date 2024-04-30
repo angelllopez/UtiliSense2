@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Continuos Integration Workflow
 
 on:
   push:
